@@ -1,11 +1,40 @@
+# ZERONE — YUGA
 
-## Run Locally
+Official website for ZERONE — YUGA, the intercollegiate tech fest of the Department of MCA, Siddaganga Institute of Technology, Tumkur.
 
-**Prerequisites:**  Node.js
+## Tech Stack
 
+- React 18 + TypeScript
+- Vite
+- Tailwind CSS
+- Framer Motion
+- Lucide React
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Getting Started
+
+Prerequisites: Node.js 18+ and npm.
+
+```bash
+npm install
+npm run dev
+```
+
+Then open the local URL printed in the terminal.
+
+## Build
+
+```bash
+npm run build
+npm run preview
+```
+
+## Project Structure
+
+- `App.tsx` — application root
+- `components/` — page sections (Hero, Events, Contact, and more)
+- `constants.ts` — event data and site configuration
+- `public/` — static assets (images, logo, brochure)
+
+## License
+
+All rights reserved.
