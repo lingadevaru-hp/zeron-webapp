@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <meta name="theme-color" content="#000000" />
+    
+    <!-- Tab Icon / Favicon -->
+    <link rel="icon" type="image/png" href="/SIT-Tumkur-Logo.png" />
+    <link rel="shortcut icon" type="image/png" href="/SIT-Tumkur-Logo.png" />
+    <link rel="apple-touch-icon" href="/SIT-Tumkur-Logo.png" />
+
+    <!-- SEO & Social Sharing Tags -->
+    <title>ZERONE - YUGA | SIT Tumkur</title>
+    <meta name="description" content="ZERONE: YUGA - The Age of Digital Empire. An epic intercollegiate tech fest organized by the Dept. of MCA, Siddaganga Institute of Technology, Tumkur." />
+    <meta name="keywords" content="Zerone, SIT Tumkur, MCA Fest, Tech Fest, Coding, Gaming, Hackathon" />
+    
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://zerone.sit.ac.in/" />
+    <meta property="og:title" content="ZERONE - YUGA" />
+    <meta property="og:description" content="Join the Battle. The Age of Digital Empires is here. Dec 24, 2025 at SIT Tumkur." />
+    <meta property="og:image" content="/SIT-Tumkur-Logo.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://zerone.sit.ac.in/" />
+    <meta property="twitter:title" content="ZERONE - YUGA" />
+    <meta property="twitter:description" content="Join the Battle. The Age of Digital Empires is here. Dec 24, 2025 at SIT Tumkur." />
+    <meta property="twitter:image" content="/SIT-Tumkur-Logo.png" />
+
+    <link rel="manifest" href="/manifest.json">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9WPHRH72M1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-9WPHRH72M1');
+    </script>
+
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "ul0bt10mls");
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;800&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['"Cinzel"', 'serif'],
+              display: ['"Cinzel Decorative"', 'cursive'],
+              sans: ['"Rajdhani"', 'sans-serif'],
+            },
+            colors: {
+              gold: {
+                100: '#F9F1D8',
+                200: '#F0DEAA',
+                300: '#E6CB7D',
+                400: '#DDB753',
+                500: '#D4A32C', // Base Gold
+                600: '#AA8223',
+                700: '#80621A',
+                800: '#554112',
+                900: '#2B2109',
+              },
+              royal: {
+                900: '#0f0404', // Deep dark red/brown
+                800: '#1a0505',
+              }
+            },
+            backgroundImage: {
+              'metal-gradient': 'linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c)',
+              'royal-pattern': 'radial-gradient(circle at center, #2a0a0a 0%, #000000 100%)',
+            },
+            animation: {
+              'float': 'float 6s ease-in-out infinite',
+              'pulse-glow': 'pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'spin-slow': 'spin 12s linear infinite',
+              'spin-reverse-slow': 'spin-reverse 15s linear infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              },
+              'pulse-glow': {
+                '0%, 100%': { opacity: 1, boxShadow: '0 0 20px #D4A32C' },
+                '50%': { opacity: .5, boxShadow: '0 0 5px #D4A32C' },
+              },
+              'spin-reverse': {
+                '0%': { transform: 'rotate(360deg)' },
+                '100%': { transform: 'rotate(0deg)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+    <!-- Service Worker Registration for PWA -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        const isLocalhost = location.hostname === 'localhost' || location.hostname === '127.0.0.1';
+
+        if (isLocalhost) {
+          navigator.serviceWorker.getRegistrations().then(registrations => {
+            registrations.forEach(r => r.unregister());
+          });
+        } else {
+          window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js')
+              .then(registration => {
+                console.log('SW registered: ', registration);
+              })
+              .catch(registrationError => {
+                console.log('SW registration failed: ', registrationError);
+              });
+          });
+        }
+      }
+    </script>
+  </body>
+</html>
